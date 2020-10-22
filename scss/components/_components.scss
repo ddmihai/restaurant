@@ -162,7 +162,7 @@
 
     // this is the actual card with the dishes names and the checkbox
     .recipes__card {
-        @include flex(1,1,280px);
+        @include flex(1,1,120px);
         @include flexbox (row, unset, unset);
         max-height: 80px;
         max-width: 400px;
@@ -170,3 +170,6 @@
         @include margin (unset, 10px, unset, 10px);
         @include border-radius(1em);
     }
+
+
+  
