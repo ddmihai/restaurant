@@ -1,0 +1,172 @@
+@import '../scss/animations/animations.scss';
+@import '../scss/layout/layout.scss';
+@import '../scss/tipography/tipography.scss';
+@import '../scss/variables/variables.scss';
+
+
+// HEADER
+@mixin header {
+    @include size(60px, 1200px);
+    @include flexbox (row, space-between, center);
+    @include margin (unset, auto, unset, auto);
+    @include padding (8px, 3%, 5px, 3%);
+}
+
+// HERO LOCATION
+
+.hero {
+    @include size(60px, 100%);
+    @include flexbox (row, center, center);
+    background: map-get($colors, 'light-gray' );
+
+    &__intro {
+        @include font-settings (1.2em, 600, black);
+        animation: moveRight ease-out 1s;
+
+        &--icon {
+            @include margin (unset, 10px, unset, unset);
+        }
+    }
+}
+
+// banner {
+    .banner {
+        @include size(500px, 100%);
+        background: #99e2d098;
+        @include flexbox (unset, center, center);
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            @include size(inherit, unset);
+            min-width: 100%;
+            background: url('../images/header.jpg');
+            background-position: center;
+        }
+
+        &__text {
+            @include fixed-size(250px, inherit);
+            @include flexbox (column, space-between, center);
+
+            &--title {
+                @include font-settings (1.6em, 600, black);
+            }
+
+            &--subtitle {
+                @include font-settings (1.3em, 500, black);
+            }
+        }
+        
+    }
+
+
+// wrapper 
+.wrapper {
+    @include size(400px, 1400px);
+    @include margin (unset, auto, unset, auto);
+    @include flexbox (row, unset, center);
+    
+    &__left--order {
+        @include fixed-size(30px, 30px);
+        @include flexbox (row, center, center);
+        background: map-get($colors , purple );
+        @include font-settings (1em, 500, white);
+        @include border-radius(50%);
+        position: relative;
+        z-index: 55;
+        left: -12px;
+        align-self: center;
+    }
+
+    &__right--box {
+      @include flex(1,1,250px);
+      max-width: 360px;
+      height: 250px;
+      @include margin (20px, 5px, unset, 5px);
+      @include border-radius(1em);
+      @include boxshadow;
+      background-color: white;
+
+      &:hover {
+          @include scaleZoom;
+      }
+
+      & a {
+          @include font-settings (1em, 600, black);
+      }
+}
+
+    &__right--img {
+        @include size(180px, 100%);
+    }
+
+    &__right--content {
+        @include size ( calc(100% - 180px), 100%);
+        @include flexbox (row, space-between, center);
+
+        & > div {
+            @include margin (unset, 10px, unset, 10px);
+        }
+    }
+
+    &__right--main {
+        @include font-settings (1.2em, 600, black);
+    }
+
+    &__right--submain {
+        @include font-settings (1em, 500, black);
+    }
+}
+
+    // universal button
+    .universal__btn {
+        border: none;
+        @include border-radius(2em);
+        @include fixed-size(50px, 200px); 
+        background-image: linear-gradient(to bottom right,map-get($colors , pink ),map-get($colors , purple ));
+        @include font-settings (1em, 500, white);
+    }
+
+
+    // footer
+    .footer {
+        @include size(200px, 100vw);
+        background-color: #424242;
+        @include margin (10px, 0, 0, 0);
+        @include flexbox (column, space-between, unset);
+    }
+
+
+// --------------------------------------------------------------------------------------
+// the full palette page
+    .dish {
+        @include fixed-size(550px, 100%);
+        position: relative;
+        z-index: -2;
+        
+
+        & img {
+            @include img-container ( 100% , 100%);
+            max-width: 100%;
+            min-height: 100%;
+        }
+    }
+
+    .recipes {
+        @include size(550px, 1600px);
+        @include margin (-100px, auto, unset, auto);
+        @include border-radius(2em);
+        background:rgb(236, 235, 235);
+    }
+
+    // this is the actual card with the dishes names and the checkbox
+    .recipes__card {
+        @include flex(1,1,280px);
+        @include flexbox (row, unset, unset);
+        max-height: 80px;
+        max-width: 400px;
+        background-color: map-get($colors, light-gray );
+        @include margin (unset, 10px, unset, 10px);
+        @include border-radius(1em);
+    }

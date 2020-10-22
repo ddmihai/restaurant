@@ -1,0 +1,76 @@
+
+// MIXINS FOR FLEXBOX
+@mixin flexbox ($flex-direction, $justify-content, $align-items) {
+    display: flex;
+    flex-wrap: wrap;
+    // FLEXBOX VALUES
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+/* Three values: flex-grow | flex-shrink | flex-basis */
+@mixin flex($grow, $shrink, $basis) {
+    flex-grow: $grow;
+    flex-shrink: $shrink;
+    flex-basis: $basis;
+}
+
+
+// SIZE MIXIN relative width and min height
+@mixin size($height, $width) {
+    min-height: $height;
+    max-width: $width;
+}
+
+// fixed size
+@mixin fixed-size($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+
+// MARGIN MIXIN SHORTHAND
+@mixin margin ($margin-top, $margin-right, $margin-bottom, $margin-left) {
+    margin-top: $margin-top;
+    margin-right: $margin-right;
+    margin-bottom: $margin-bottom;
+    margin-left: $margin-left;
+}
+
+// PADDING MIXIN SHORTHAND 
+@mixin padding ($padding-top, $padding-right, $padding-bottom, $padding-left) {
+    padding-top: $padding-top;
+    padding-right: $padding-right;
+    padding-bottom: $padding-bottom;
+    padding-left: $padding-left;
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+@mixin bordetopradius {
+    border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+}
+
+
+@mixin img-container ($max-h,$max-w) {
+    max-height: $max-h;
+    min-width: $max-w;
+    object-fit: cover;
+}
+
+@mixin box-shadow {
+    box-shadow: #d8d6d6 4px 4px 4px;
+}
+
+@mixin boxshadow {
+    box-shadow: #d1cfcf 2px 2px 2px 2px;
+}
+
+@mixin border-checked {
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}

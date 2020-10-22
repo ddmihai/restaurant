@@ -1,0 +1,16 @@
+// remove margins, padding, set box sizing to borderbox, remove all the text decorations and set universal font family and size fixed for all elements
+@import '../scss/animations/animations.scss';
+@import '../scss/components/components.scss';
+@import '../scss/layout/layout.scss';
+@import '../scss/tipography/tipography.scss';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: map-get($font-family, text );
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+

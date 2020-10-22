@@ -1,0 +1,13 @@
+// font family map
+$font-family: (
+    text: 'Roboto',
+    title: 'Shrikhand'
+);
+
+
+ // FONT SETTINGS MIXIN
+@mixin font-settings ($font-size, $font-weight, $color) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}

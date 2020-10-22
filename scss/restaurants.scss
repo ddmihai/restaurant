@@ -1,0 +1,137 @@
+@import '../scss/animations/animations.scss';
+@import '../scss/components/components.scss';
+@import '../scss/layout/layout.scss';
+@import '../scss/tipography/tipography.scss';
+@import '../scss/resets/resets.scss';
+@import '../scss/variables/variables.scss';
+
+
+// THIS IS THE FIRST PAGE CALLED THE FULL PALLETE
+// this is the section with the image dish banner set back with zindex
+.dish {
+    @extend .dish;
+}
+
+// this is the section with the names of the containers cards
+.recipes {
+    @extend .recipes;
+    position: relative;
+    z-index: 80;
+
+    &__title {
+        @include font-settings (1.4em, 400, black);
+        font-family: map-get($font-family, title );
+        @include  padding (20px, unset, 20px, 4%); 
+    }
+
+    &__wrapper {
+        max-height: fit-content;
+        @include size(inherit, inherit);  
+        @include flexbox (row, unset, unset);
+    }
+
+// this is the container that holds the three types of food
+    &__container {
+        @include flex(1,1,260px);
+        max-height: 500px;
+
+        &--title {
+            @include font-settings (1.4em, 300, black);
+            @include padding (unset, unset, unset, 1em);
+            height: 70px;
+            @include flexbox (column, center, unset);
+        }
+
+        &--title::after {
+            content: "";
+            display: block;
+            height: 5px;
+            width: 50px;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            background-color: map-get($colors, green );
+
+            animation: after ease-out 2s ;
+            animation-delay: .4s;
+    }
+
+    &--wrapper {
+        max-width: 440px;
+        align-self: center;
+        border: 2px solid blue;
+        height: 440px;
+        @include flexbox (column, space-evenly, unset); 
+    }
+  }
+}
+
+// this is the actual card
+.recipes__card {
+    @extend .recipes__card;
+    animation: poPup 1s;
+    animation-delay: .2s;
+
+    &:nth-child(1) {
+      animation-delay: .5s;
+    }
+    &:nth-child(2) {
+      animation-delay: .6s;
+    }
+    &:nth-child(3) {
+      animation-delay: .7s;
+    }
+
+    &--text {
+      border: 2px solid red;
+      @include size(100%, fit-content);
+      @include flexbox (column, space-evenly, unset);
+      @include padding (unset, unset, unset, 10px);
+    }
+
+    &--title {
+      @include font-settings (1.1em, 600, black);
+    }
+
+    &--subtitle {
+      @include font-settings (1em, 400, black);
+    }
+
+    &--price {
+        border: 2px solid blue;
+        margin-left: auto;
+        @include flexbox (column, center, center);
+        @include font-settings (1em, 600, black);
+    }
+
+    &--checked {
+      @include flexbox (column, center, center);
+      @include border-checked;
+      background-color: map-get($colors , green);
+      width: 0px;
+      transition: ease-in .6s;
+
+      & i {
+          @include fixed-size(25px,25px);
+          color:  map-get($colors , green);
+          @include border-radius(50%);
+          background-color: white;
+          @include flexbox (column, center, center);
+          display: none;
+          transition: ease-out .8s;
+          transition-delay: .6s;
+          animation: rotate-move 1s;
+      }
+    }
+}
+
+// hover effect for the checked box
+.recipes__card:hover > .recipes__card--checked {
+    width: 70px;
+}
+
+// hover effect for the checked box
+.recipes__card:hover > .recipes__card--checked i{
+    display: flex;
+    animation: rotate 1.1s;
+}

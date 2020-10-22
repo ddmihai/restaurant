@@ -1,0 +1,191 @@
+@import '../scss/animations/animations.scss';
+@import '../scss/components/components.scss';
+@import '../scss/layout/layout.scss';
+@import '../scss/tipography/tipography.scss';
+@import '../scss/resets/resets.scss';
+@import '../scss/variables/variables.scss';
+
+
+// HEADER 
+header {
+    @include header;
+
+    & img {
+        @include size (25px, 130px);
+    }
+
+    & ul {
+        @include flexbox (row, space-evenly, center);
+        @include flex(1, 1, 400px);
+        @include margin (unset, 10px, 10px, 10px);
+        max-width: 500px;
+
+        & a {
+            @include font-settings (1.2em, 500, black);
+        }
+
+        & li {
+            @include margin (15px, 15px, 5px, 15px);
+        }
+    }
+}
+
+// HERO LOCATION
+.hero {
+    @extend .hero;
+}
+
+// banner with image div
+.banner {
+    @extend .banner;
+}
+
+.universal__btn {
+    @extend .universal__btn;
+    animation: pulse 1.2s ease infinite;
+    animation-delay: 1.5s;
+}
+
+
+// this is the container with the instructions wrapper
+.wrapper {
+    @extend .wrapper;
+
+    &__left {
+        @include flexbox (column, unset, unset);
+        @include flex(1, 1, 260px);
+        align-self: flex-start;
+
+        &--title {
+            @include font-settings (1.4em, 600, black);
+            @include padding (20px, unset, 20px, 6%);
+        }
+
+        &--cards {
+            @include size(inherit, inherit);
+        }
+
+        &--div {
+            @include size(70px, 400px);
+            @include margin (40px, auto, 40px, auto);
+        }
+
+        &--card {
+            @include size(inherit, 93%);
+            margin: 0 auto;
+            @include border-radius(1em);
+            background: map-get($colors, 'light-gray');
+            position: relative;
+            @include flexbox (row, unset, center);
+            @include box-shadow;
+            transition: ease-in .5s;
+            cursor: pointer;
+
+            &:hover {
+                @include background-pink;
+            }
+        }
+
+        &--order {
+            @extend .wrapper__left--order;
+        }
+
+        &--text {
+            @include flex(1, 1, 200px);
+        }
+    }
+
+    .icon {
+        @include font-settings (1.2em, 500, unset);
+        margin-right: 10px;
+
+        & i {
+            color: grey;
+        }
+    }
+
+    .text {
+        @include font-settings (1.2em, 500, black);
+    }
+
+
+// this is the right part with restaurants cards
+    &__right {
+        @include flexbox (column, unset, unset);
+        @include flex(1, 1, 260px);
+        background-color: rgb(240, 239, 239);
+
+        &--title {
+            @extend .wrapper__left--title;
+        }
+
+        &--container {
+            @include size(inherit, inherit);
+            padding: 10px;
+            padding-bottom: 20px;
+            @include flexbox (row, center, center);
+            max-height: fit-content;
+        }
+
+        &--box {
+           @extend .wrapper__right--box;
+           margin-top: 10px;
+        }
+
+        &--img {
+            @extend .wrapper__right--img;
+            
+            & img {
+                @include img-container (180px,100%);
+                @include bordetopradius;
+            }
+        }
+    }
+
+    &--content {
+        @extend .wrapper__right--content;
+    }
+}
+
+// this is the heart from the main page
+.fa-heart {
+    @include font-settings (1.5em, 500, map-get($colors, green));
+    transition: ease-in .5s;
+    
+    &:hover {
+       color: map-get($colors, purple);     
+    }
+    
+}
+
+
+// footer section
+.footer {
+    @extend .footer;
+
+    &__content {
+        @include size(inherit, fit-content);
+        @include flexbox (column, center, center);
+        @include padding (10px, 20px, 10px, 10px);
+        margin-left: 5%;
+    }
+
+    &__title {
+        @include font-settings (1.4em, 500, white);
+        font-family: map-get($font-family, title );
+    }
+
+    &__links li{
+        @include font-settings (1em, 500, white); 
+        line-height: 30px;
+        
+        & i {
+            color: white;
+        }
+
+        & a {
+            @include font-settings (1em, 500, white !important);
+            @include margin (10px, 20px, 10px, 10px);
+        }
+    }
+}
