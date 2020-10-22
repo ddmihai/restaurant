@@ -1,0 +1,434 @@
+/* select borderbox for all containers and select font */
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1700px;
+    min-height: 100vh;
+    margin: 2% auto;
+    padding: .5em;
+}
+
+/* LAYOUT */
+header {
+    width: 100%;
+    min-height: 80px;
+    margin-bottom: 1em;
+}
+
+.hero {
+    width: 100%;
+    min-height: 300px;
+}
+
+.accomodation {
+    max-width: 100%;
+    min-height: 550px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.activities {
+    width: 100%;
+    min-height: 350px;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column; 
+}
+footer {
+    width: 100%;
+    min-height: 300px;
+    background: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* LAYOUT CSS ABOVE */
+/* HERE STARTS HEADER CSS */
+/* header elements CSS */
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header ul li {
+    list-style: none;
+    padding: 1.3em;
+}
+.logo {
+    padding: 8px;
+    order: 1;
+}
+header ul li a {
+    text-decoration: none;  
+    font-size: 1.2em;
+    color: #0065FC;
+}
+/* flex order settings */
+.second {
+    margin-left: auto;
+    order: 2;
+}
+.third {
+    order: 3;
+}
+
+.last {
+    order: 4;
+} 
+.gray {
+    color: gray;
+}
+.signup {
+    font-weight: 700;
+}
+/* HOVER EFFECTS */
+header ul li:hover {
+    border-top: 2px solid #0065FC;
+}
+header ul li:first-child:hover {
+    border: none;
+}
+
+
+
+
+/* HERO SECTION WITH ELEMENTS INSIDE CSS */
+/* intro div */
+
+.where {
+    font-weight: 300;
+    font-size: .75em;
+}
+/* searchbar div including css for icons and input form */
+.hero__search--div {
+    display: flex;
+    align-content: center;
+}
+.hero__form {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    display: flex;
+    align-content: center;
+    width: 100%;
+}
+.hero__form input {
+    max-width: 250px;
+    width: 500px;
+    border: none;
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+}
+.hero__form input::placeholder {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-left: 10px;
+    color: black;
+}
+/* icons css */
+.place {
+    padding: 9px;
+    background: #F2F2F2;
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+}
+.hero__search--icon {
+    padding: 9px;
+    border: none;
+    background: #0065FC;
+    display: none;
+}
+.hero__search {
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 9px;
+    border: none;
+    border-bottom-right-radius: .5em;
+    border-top-right-radius: .5em;
+    background: #0065FC;
+    height: 100%;
+}
+
+/* FILTERS SECTION CSS */
+.hero__filters {
+    display: flex;
+    align-content: center;
+    margin-top: 1em;
+    flex-wrap: wrap;
+}
+
+.hero__filters ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+}
+.hero__filters ul li {
+    list-style: none;
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+    border-right: 2px solid #F2F2F2;
+    border-radius: 2em;
+    padding-right: 15px;
+    margin-bottom: 1em;
+    margin-left: 2%;
+}
+
+.hero__filters ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.hero__filters--i {
+    background: #DEEBFF;
+    color: #0065FC;
+    padding: 15px;
+    border-radius: 50%;
+}
+.hero__link--title {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-bottom: 15px;
+}
+/* in order that the romantic tab to be displayed on the same line next to lower cost link, i need to change the order
+of the ul li links and set mediaquerry to a different flex order
+bellow will be set the flex order of li content */
+.hero__filters ul li:nth-child(1) {
+    order: 1;
+}
+.hero__filters ul li:nth-child(2) {
+    order: 2;
+}
+.hero__filters ul li:nth-child(3) {
+    order: 3;
+}
+.hero__filters ul li:nth-child(4) {
+    order: 4;
+}
+
+/* HERO INFO PARAGRAPH CSS */
+
+.hero__info {
+    min-height: 50px;
+    max-width: 440px;
+    display: flex;
+    margin-top: 1em;
+}
+
+.circle {
+    color: #0065FC;
+    font-size: 1.2em;
+    padding-right: 10px;
+}
+/* ACCOMODATION SECTION CSS */
+
+.accomodation__marseille {
+    min-width: 60%;
+    flex: 1 1 275px;
+    min-height: 95%;
+    background: #F2F2F2;
+    border-radius: 1em;
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.accomodation__title {
+    min-height: 50px;
+    width: 100%;
+    padding-left: 2%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: bold;
+    font-size: 1.34em;
+}
+/* MARSEILLE CARDS */
+.marseille__card {
+    height: 200px;
+    flex: 1 1 270px;
+    max-width: 280px;
+    border-radius: 1em;
+    margin: 1%;
+    padding: .5em;
+    cursor: pointer;
+    background: white;
+    box-shadow: 3px 3px 3px lightgray;
+    margin-bottom: 2%;
+}
+/* MARSEILLE CARDS ELEMENTS: IMAGE, TITLES, SUBTITLES PRICE, AND STARS */
+.card__img {
+    height: 60%;
+    width: 100%;
+}
+.card__img img {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    object-fit: cover;
+    object-position: center;
+}
+.card__title {
+    font-weight: 700;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.card__subtitle {
+    font-size: .85em;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+.card__price {
+    font-weight: 700;
+}
+.card__stars {
+    padding-left: 10px;
+    font-size: 1.2em;
+}
+/* stars collors */
+.card__grey--star {
+    color: lightgray;
+}
+.card__blue--star {
+    color: #0065FC;
+}
+.accomodation__title--bottom {
+    height: 50px;
+    width: 100%;
+    padding-left: 2%;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+}
+
+/* MOST POPULAR OFFERS CSS  */
+.accomodation__popular {
+    min-width: 30%;
+    height: auto;
+    background: #F2F2F2;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    border-radius: 1em;
+    flex: 1 2 270px;
+    padding-bottom: 4%;
+}
+
+.accomodation__popular--title {
+    min-height: 50px;
+    width: 100%;
+    padding-left: 2%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: bold;
+    font-size: 1.34em;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+ .accomodation__popular--title i{
+     float: right;
+ }
+/* actual card css */
+.popular__card {
+    max-width: 340px;
+    margin: 0 auto;
+    margin-top: 2em;
+    min-height: 150px;
+    padding: .3em;
+    background: white;
+    border-radius: 1em;
+    display: flex;
+    box-shadow: 3px 3px 3px lightgray;
+}
+/* the popular card is divided in two parts. the first is the image itself. the second one is the div that contains the title, subtitle, price, and the stars. 
+the second div is also set in flex mode and flex direction is set to column, align items space between or evenly */
+.popular__img {
+    min-height: 100%;
+    max-width: 120px;
+}
+.popular__img img {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    object-fit: cover;
+    object-position: center;
+}
+.popular__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* ACTIVITIES SECTION  */
+.activities__title {
+    font-size: 1.3em;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 2%;
+}
+.activities__cards--section {
+    border: 2px solid red;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2%;
+}
+.activity__card {
+    border: 2px solid black;
+    flex: 1 2 260px;
+    max-width: 370px;
+    min-height: 250px;
+    max-height: 320px;
+    margin-left: 1%;
+    margin-bottom: 1.5%;
+}
+/* nth child */
+
+
+
+
+/* footer  */
+footer ul li {
+    list-style: none;
+    margin-bottom: .5em;
+}
+footer ul li:first-child {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+footer ul {
+    height: 100%;
+    padding: 4%;
+}
+.footer__about {
+    flex: 1 1 270px;
+    max-height: 200px;
+}
+
+.footer__accomodations {
+    flex: 1 1 270px;
+    max-height: 200px;
+}
+.footer__asistance {
+    flex: 1 1 270px;
+    max-height: 200px;
+}

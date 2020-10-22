@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import initial css main anc mediaquerries -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media-querryes.css">
+
+    <!-- import font raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- import icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+
+<!-- HEADER -->
+    <header>
+        <ul>
+            <li class="logo"><img src="images/logo/Reservia.svg" alt="reseervia blue logo"></li>
+            <li class="second"><a href="#"> Accomodations</a></li>
+            <li class="third"><a href="#" class="gray"> Activities</a></li>
+            <li class="last"><a href="#" class="signup"> Sign Up</a></li>
+        </ul>
+    </header>
+
+
+<!-- HERO -->
+    <section class="hero">
+        <div class="hero__intro">
+            <h1>
+                <span class="intro">Find a place for your dream vacation    <br></span>
+                <span class="where">Downtown or in nature</span>
+            </h1>
+            <div class="hero__search--div">
+                    <form class="hero__form" action="#">
+                        <i class="material-icons place">place</i>
+                        <input type="text" placeholder="Marseille, France">
+                        <button type="submit" class="hero__search--icon"><i class="fa fa-search"></i></button>
+                        <button class="hero__search">Search</button>
+                    </form>
+            </div>
+            <div class="hero__filters">
+                <div class="hero__link--title"> Filters</div>
+                    <ul>
+                        <li><a href="#" class="hero__link"> <i class='fas fa-money-bill-wave hero__filters--i'></i>  Lower Cost</a></li>
+                        <li><a href="#" class="hero__link"> <i class='fas fa-child  hero__filters--i'></i>    Family-Friendly </a></li>
+                        <li><a href="#" class="hero__link"> <i class='fas fa-heart  hero__filters--i'></i>    Romantic</a></li>
+                        <li><a href="#" class="hero__link"> <i class='fas fa-dog  hero__filters--i'></i>  Pets Alowed</a></li>
+                    </ul>
+            </div>
+            <div class="hero__info">
+                <i class="fa fa-info-circle circle"></i>
+                <p class="hero__info--text">More than 500 accomodations are available in this city</p>
+            </div>
+        </div>
+    </section>
+
+
+<!-- ACCOMODATION -->
+    <section class="accomodation">
+        <div class="accomodation__marseille">
+            <div class="accomodation__title">Accomodations in Marseille</div>
+            <div class="marseille__card">
+                    <div class="card__img"><img src="images/marseille/1.jpg" alt="hotel room"></div>
+                    <div class="card__title">Auberge la Cannebiere</div>
+                    <div class="card__subtitle">Night starting at <span class="card__price">25&euro;</span></div>
+                    <div class="card__stars"><span class="card__blue--star">&#9733;&#9733;&#9733;&#9733;</span><span class="card__grey--star">&#9733;</span></div>
+            </div>
+
+            <div class="marseille__card">
+                <div class="card__img"><img src="images/marseille/2.jpg" alt="hotel room"></div>
+                <div class="card__title">Hotel du port</div>
+                <div class="card__subtitle">Night starting at <span class="card__price">52&euro;</span></div>
+                <div class="card__stars"><span class="card__blue--star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+            </div>
+
+            <div class="marseille__card">
+                <div class="card__img"><img src="images/marseille/3.jpg" alt="hotel room"></div>
+                <div class="card__title">Les mouettes Hotel</div>
+                <div class="card__subtitle">Night starting at <span class="card__price">76&euro;</span></div>
+                <div class="card__stars"><span class="card__blue--star">&#9733;&#9733;&#9733;&#9733;</span><span class="card__grey--star">&#9733;</span></div>
+            </div>
+
+            <div class="marseille__card">
+                <div class="card__img"><img src="images/marseille/4.jpg" alt="hotel room"></div>
+                <div class="card__title">Hotel de la mer</div>
+                <div class="card__subtitle">Night starting at <span class="card__price">46&euro;</span></div>
+                <div class="card__stars"><span class="card__blue--star">&#9733;&#9733;&#9733;</span><span class="card__grey--star">&#9733;&#9733;</span></div>
+            </div>
+
+            <div class="marseille__card">
+                <div class="card__img"><img src="images/marseille/5.jpg" alt="hotel room"></div>
+                <div class="card__title">Auberge Le Panier</div>
+                <div class="card__subtitle">Night starting at <span class="card__price">23&euro;</span></div>
+                <div class="card__stars"><span class="card__blue--star">&#9733;&#9733;&#9733;&#9733;</span><span class="card__grey--star">&#9733;</span></div>
+            </div>
+
+            <div class="marseille__card">
+                <div class="card__img"><img src="images/marseille/6.jpg" alt="hotel room"></div>
+                <div class="card__title">Hotel chez Amina</div>
+                <div class="card__subtitle">Night starting at <span class="card__price">96&euro;</span></div>
+                <div class="card__stars"><span class="card__blue--star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+            </div>
+            <div class="accomodation__title--bottom">Show More</div>
+        </div>
+
+        <div class="accomodation__popular">
+            <div class="accomodation__popular--title">Most popular   <i class="fa icon">&#xf201;</i></div>
+            <div class="popular__card">
+                <div class="popular__img"><img src="images/marseille/right-1.jpg" alt="hotel room promo"></div>
+                <div class="popular__details">
+                    <div class="card__title">Morning Sun Hotel</div>
+                    <div class="card__subtitle">Night starting at <span class="price">128&euro;</span></div>
+                    <div class="card__stars"><span class="card__blue--star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                </div>
+            </div>
+
+            <div class="popular__card">
+                <div class="popular__img"><img src="images/marseille/right-2.jpg" alt="hotel room promo"></div>
+                <div class="popular__details">
+                    <div class="card__title">Au coeur de l'eau Bed and Breakfast</div>
+                    <div class="card__subtitle">Night starting at <span class="price">71&euro;</span></div>
+                    <div class="card__stars"><span class="card__blue--star">&#9733;&#9733;&#9733;&#9733;</span><span class="card__grey--star">&#9733;</span></div>
+                </div>
+            </div>
+
+            <div class="popular__card">
+                <div class="popular__img"><img src="images/marseille/right-3.jpg" alt="hotel room promo"></div>
+                <div class="popular__details">
+                    <div class="card__title">Tut bleu et Blank Hotel</div>
+                    <div class="card__subtitle">Night starting at <span class="price">68&euro;</span></div>
+                    <div class="card__stars"><span class="card__blue--star">&#9733;&#9733;&#9733;&#9733;</span><span class="card__grey--star">&#9733;</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ACTIVITIES -->
+    <section class="activities">
+       <div class="activities__title">Activities</div>
+       <div class="activities__cards--section">
+           <div class="activity__card"></div>
+           <div class="activity__card"></div>
+           <div class="activity__card"></div>
+           <div class="activity__card"></div>
+           <div class="activity__card"></div>
+           <div class="activity__card"></div>
+       </div>
+        
+    </section>
+<!-- FOOTER -->
+    <footer>
+        <div class="footer__about">
+            <ul>
+                <li>About</li>
+                <li>Site Map</li>
+                <li>General Terms and Conditions</li>
+                <li>Data and Privacy</li>
+            </ul>
+        </div>
+        <div class="footer__accomodations">
+            <ul>
+                <li>Our accomodations</li>
+                <li>Quality Assessment</li>
+                <li>You have a hotel?</li>
+            </ul>
+        </div>
+        <div class="footer__asistance">
+            <ul>
+                <li>Assistance</li>
+                <li>Hel Desk</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+</body>
+</html>

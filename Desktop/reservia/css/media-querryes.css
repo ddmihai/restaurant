@@ -1,0 +1,68 @@
+@media only screen and (max-width: 600px) {
+    /* remove body padding */
+    body {
+        padding: 1%;
+        margin: 0;
+    }
+    /* header bold order class change to 2 */
+    .last {
+        order: 1;
+        margin-left: auto;
+    }
+    .second {
+        margin-right: auto;
+        width: 50%;
+        border-bottom: 2px solid lightgrey;
+        padding-left: 10px;
+    }
+    .third {
+        margin-left: auto;
+        width: 50%;
+        text-align: right;
+        border-bottom: 2px solid lightgrey;
+    }
+    /* remove hover border top and set to border bottom */
+    header ul li:hover {
+        border: none;
+        border-bottom: 2px solid #0065FC;
+    }
+    header ul li:last-child:hover {
+        border: none;
+    }
+    /* FILTERS CSS MEDIAQUERRYES */
+    /* change filters order */
+    .hero__filters ul li:nth-child(3) {
+        order: 1;
+    }
+    .hero__filters ul li:nth-child(2) {
+        padding-right:25px;
+    }
+    .hero__filters ul li:nth-child(4) {
+        padding-right:50px;
+    }
+    /* search hide and display search icon */
+    .hero__search {
+        display: none;
+    }
+    .hero__search--icon {
+        display: flex;
+        padding: 15px;
+        color: white;
+        border: none;
+        border-radius: 1em;
+    }
+
+    /* ACCOMODATION SECTION */
+    .accomodation__marseille {
+       background: white;
+    }
+    .accomodation__popular {
+       margin: 0;
+    }
+
+    /* popular card */
+    .popular__card {
+        margin: 0;
+        margin: 2% auto;
+    }
+}
